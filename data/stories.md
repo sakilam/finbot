@@ -33,3 +33,49 @@
 * source_code
     - utter_source_code
     - utter_anything_else
+
+## greet chitchat
+* greet
+    - utter_greet
+* chitchat
+    - respond_chitchat
+
+## chitchat
+* chitchat
+    - respond_chitchat
+
+## deny chitchat
+* chitchat
+    - respond_chitchat
+* deny
+    - utter_nohelp
+
+## more chitchat
+* greet
+    - utter_greet
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+
+## more chitchat
+* greet
+    - utter_greet
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+
+## greet greet chitchat
+* greet
+    - utter_greet
+* greet
+    - utter_greet
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat

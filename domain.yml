@@ -7,10 +7,13 @@ intents:
   - react_negative
   - react_positive
   - source_code
+  - chitchat
   - thank
 
 entities:
   - name
+  - language
+  - location
 
 responses:
   utter_greet:
@@ -53,6 +56,9 @@ responses:
     - text: For now that's all I can do, so feel free to try it out. If you have any suggestions for what I should learn, let me know!
   utter_source_code:
     - text: My code is not open source
+
+actions:
+  - respond_chitchat
 
 session_config:
   session_expiration_time: 60
