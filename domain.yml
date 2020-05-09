@@ -1,0 +1,59 @@
+intents:
+  - affirm
+  - bye
+  - canthelp
+  - deny
+  - greet
+  - react_negative
+  - react_positive
+  - source_code
+  - thank
+
+entities:
+  - name
+
+responses:
+  utter_greet:
+    - text: Hey there, my name is Finbot.
+    - text: Hi, I'm Finbot!
+    - text: Hi! My name's Finbot.
+  utter_noworries:
+    - text: No worries!
+    - text: You're welcome!
+    - text: I'm happy to help.
+  utter_anything_else:
+    - text: Is there anything else I can help you with?
+  utter_bye:
+    - text: Goodbye!
+    - text: Bye!
+    - text: Ciao!
+    - text: Bye, was nice talking to you!
+    - text: Bye bye!
+  utter_what_help:
+    - text: Ok, what can I help you with?
+  utter_thumbsup:
+    - text: 👍
+    - text: Okay.
+    - text: Got it.
+  utter_possibilities:
+    - text: "You can ask me about your payroll related quieres"
+  utter_react_negative:
+    - text: 😕
+    - text: 😞
+    - text: 😥
+    - text: 😢
+  utter_react_positive:
+    - text: 😄
+    - text: 😊
+    - text: 👏
+    - text: 😍
+  utter_canthelp:
+    - text: I'm sorry I couldn't help you.
+  utter_nohelp:
+    - text: For now that's all I can do, so feel free to try it out. If you have any suggestions for what I should learn, let me know!
+  utter_source_code:
+    - text: My code is not open source
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
