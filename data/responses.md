@@ -54,11 +54,7 @@
   -  Winter is coming ⚔️
 
 ## chitchat
-* chitchat/ask_whatspossible 
-  -  You can ask me about your queries related to payroll.
-
-## chitchat
-* chitchat/ask_wherefrom 
+* chitchat/ask_wherefrom
   -  I was born in Hyderabad, but I consider myself a citizen of the world.
   -  I was born in the coolest city on Earth, in Hyderabad.
   -  I was taught not to give out my address on the internet.

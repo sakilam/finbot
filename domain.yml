@@ -9,6 +9,7 @@ intents:
   - source_code
   - chitchat
   - thank
+  - ask_whatspossible
 
 entities:
   - name
@@ -56,6 +57,8 @@ responses:
     - text: For now that's all I can do, so feel free to try it out. If you have any suggestions for what I should learn, let me know!
   utter_source_code:
     - text: My code is not open source
+  utter_what_possible:
+    - text: "You can ask me following queries or any other queries related to your payroll. \nWhat is my EmployeeID? \nWhat is my payroll status? \nWhat is my Health insurance policy number?"
 
 actions:
   - respond_chitchat

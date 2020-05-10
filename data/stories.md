@@ -1,11 +1,20 @@
-## greet
+## greet what possible
 * greet
     - utter_greet
+* ask_whatspossible
+    - utter_what_possible
 
 ## thanks
 * thank
     - utter_noworries
     - utter_anything_else
+
+## thanks what possible
+* thank
+    - utter_noworries
+    - utter_anything_else
+* ask_whatspossible
+    - utter_what_possible
 
 ## bye
 * bye
@@ -40,6 +49,14 @@
 * chitchat
     - respond_chitchat
 
+## greet chitchat what possible
+* greet
+    - utter_greet
+* chitchat
+    - respond_chitchat
+* ask_whatspossible
+    - utter_what_possible
+
 ## chitchat
 * chitchat
     - respond_chitchat
@@ -58,6 +75,16 @@
 * chitchat
     - respond_chitchat
 
+## more chitchat what possible
+* greet
+    - utter_greet
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* ask_whatspossible
+    - utter_what_possible
+
 ## more chitchat
 * greet
     - utter_greet
@@ -70,6 +97,20 @@
 * chitchat
     - respond_chitchat
 
+## more chitchat what possible
+* greet
+    - utter_greet
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* ask_whatspossible
+    - utter_what_possible
+
 ## greet greet chitchat
 * greet
     - utter_greet
@@ -79,3 +120,15 @@
     - respond_chitchat
 * chitchat
     - respond_chitchat
+
+## greet greet chitchat what possible
+* greet
+    - utter_greet
+* greet
+    - utter_greet
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* ask_whatspossible
+    - utter_what_possible
