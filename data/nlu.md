@@ -1651,6 +1651,29 @@
 - tell me something funny, like a joke
 - you can say a jok
 
+## intent:request_personal_details
+- Please provide my [personal details](personal_details)?
+- Share my [Personal details](personal_details)?
+- My I know my [Personal Details](personal_details)?
+- What are my [personal Details](personal_details)?
+- [Personal details](personal_details) please?
+- Let me know my [Personal details](personal_details)?
+
+## intent:share_employee_id
+- My employee id is [1](emp_id).
+- [2](emp_id) is my employee id.
+- Here is my employee id [3](emp_id).
+- This is my employee id [4](emp_id).
+- My Employee Id is [5](emp_id).
+- Here is my Employee ID [6](emp_id).
+- This is my employee Id [7](emp_id).
+- My employee code is [8](emp_id).
+- [9](emp_id) is my employee code.
+- Here is my employee code [10](emp_id).
+- This is my employee code [11](emp_id).
+- My Employee Code is [12](emp_id).
+- Here is my employee Code [13](emp_id).
+
 ## synonym:all
 - both
 

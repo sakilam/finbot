@@ -1,68 +1,101 @@
-intents:
-  - affirm
-  - bye
-  - canthelp
-  - deny
-  - greet
-  - react_negative
-  - react_positive
-  - source_code
-  - chitchat
-  - thank
-  - ask_whatspossible
-
-entities:
-  - name
-  - language
-  - location
-
-responses:
-  utter_greet:
-    - text: Hey there, my name is Finbot.
-    - text: Hi, I'm Finbot!
-    - text: Hi! My name's Finbot.
-  utter_noworries:
-    - text: No worries!
-    - text: You're welcome!
-    - text: I'm happy to help.
-  utter_anything_else:
-    - text: Is there anything else I can help you with?
-  utter_bye:
-    - text: Goodbye!
-    - text: Bye!
-    - text: Ciao!
-    - text: Bye, was nice talking to you!
-    - text: Bye bye!
-  utter_what_help:
-    - text: Ok, what can I help you with?
-  utter_thumbsup:
-    - text: 👍
-    - text: Okay.
-    - text: Got it.
-  utter_possibilities:
-    - text: "You can ask me about your payroll related quieres"
-  utter_react_negative:
-    - text: 😕
-    - text: 😞
-    - text: 😥
-    - text: 😢
-  utter_react_positive:
-    - text: 😄
-    - text: 😊
-    - text: 👏
-    - text: 😍
-  utter_canthelp:
-    - text: I'm sorry I couldn't help you.
-  utter_nohelp:
-    - text: For now that's all I can do, so feel free to try it out. If you have any suggestions for what I should learn, let me know!
-  utter_source_code:
-    - text: My code is not open source
-  utter_what_possible:
-    - text: "You can ask me following queries or any other queries related to your payroll. \nWhat is my EmployeeID? \nWhat is my payroll status? \nWhat is my Health insurance policy number?"
-
-actions:
-  - respond_chitchat
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- affirm
+- bye
+- canthelp
+- deny
+- greet
+- react_negative
+- react_positive
+- source_code
+- chitchat
+- thank
+- ask_whatspossible
+- request_personal_details
+- share_employee_id
+- chitchat/ask_builder
+- chitchat/ask_howdoing
+- chitchat/ask_languagesbot
+- chitchat/ask_howbuilt
+- chitchat/ask_howold
+- chitchat/ask_ishuman
+- chitchat/ask_weather
+- chitchat/handleinsult
+- chitchat/ask_isbot
+- chitchat/nicetomeeyou
+- chitchat/ask_wherefrom
+- chitchat/ask_whoisit
+- chitchat/telljoke
+entities:
+- name
+- language
+- location
+- personal_details
+- emp_id
+responses:
+  utter_greet:
+  - text: Hey there, my name is Finbot. How can I help?
+  - text: Hi, I'm Finbot!. How can I help?
+  - text: Hi! My name's Finbot. How can I help?
+  utter_noworries:
+  - text: No worries!
+  - text: You're welcome!
+  - text: I'm happy to help.
+  utter_anything_else:
+  - text: Is there anything else I can help you with?
+  utter_bye:
+  - text: Goodbye!
+  - text: Bye!
+  - text: Ciao!
+  - text: Bye, was nice talking to you!
+  - text: Bye bye!
+  utter_what_help:
+  - text: Ok, what can I help you with?
+  utter_thumbsup:
+  - text: 👍
+  - text: Okay.
+  - text: Got it.
+  utter_possibilities:
+  - text: You can ask me about your payroll related quieres
+  utter_react_negative:
+  - text: 😕
+  - text: 😞
+  - text: 😥
+  - text: 😢
+  utter_react_positive:
+  - text: 😄
+  - text: 😊
+  - text: 👏
+  - text: 😍
+  utter_canthelp:
+  - text: I'm sorry I couldn't help you.
+  utter_nohelp:
+  - text: For now that's all I can do, so feel free to try it out. If you have any
+      suggestions for what I should learn, let me know!
+  utter_source_code:
+  - text: My code is not open source
+  utter_what_possible:
+  - text: "You can ask me following queries or any other queries related to your payroll.\
+      \ \nWhat is my EmployeeID? \nWhat is my payroll status? \nWhat is my Health\
+      \ insurance policy number?"
+  utter_ask_employee_id:
+  - text: What is your Employee Id?
+actions:
+- respond_chitchat
+- action_personal_details
+- utter_greet
+- utter_noworries
+- utter_anything_else
+- utter_bye
+- utter_what_help
+- utter_thumbsup
+- utter_possibilities
+- utter_react_negative
+- utter_react_positive
+- utter_canthelp
+- utter_nohelp
+- utter_source_code
+- utter_what_possible
+- utter_ask_employee_id

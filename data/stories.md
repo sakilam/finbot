@@ -132,3 +132,11 @@
     - respond_chitchat
 * ask_whatspossible
     - utter_what_possible
+
+## greet personal details
+* greet
+    - utter_greet
+* request_personal_details
+    - utter_ask_employee_id
+* share_employee_id
+    - action_personal_details
