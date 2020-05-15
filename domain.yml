@@ -14,6 +14,7 @@ intents:
 - thank
 - ask_whatspossible
 - request_personal_details
+- request_joining_date
 - share_employee_id
 - chitchat/ask_builder
 - chitchat/ask_howdoing
@@ -34,6 +35,7 @@ entities:
 - location
 - personal_details
 - emp_id
+- joined_on
 responses:
   utter_greet:
   - text: Hey there, my name is Finbot. How can I help?
@@ -85,6 +87,7 @@ responses:
 actions:
 - respond_chitchat
 - action_personal_details
+- action_joining_date
 - utter_greet
 - utter_noworries
 - utter_anything_else

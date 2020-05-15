@@ -1659,6 +1659,14 @@
 - [Personal details](personal_details) please?
 - Let me know my [Personal details](personal_details)?
 
+## intent:request_joining_date
+- Please provide my [joining date](joined_on)?
+- Share my [Joining date](joined_on)?
+- My I know my [Joining Date](joined_on)?
+- What is my [joining Date](joined_on)?
+- [Joining date](joined_on) please?
+- Let me know my [Joining date](joined_on)?
+
 ## intent:share_employee_id
 - My employee id is [1](emp_id).
 - [2](emp_id) is my employee id.

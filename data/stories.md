@@ -140,3 +140,11 @@
     - utter_ask_employee_id
 * share_employee_id
     - action_personal_details
+
+## greet joining date
+* greet
+    - utter_greet
+* request_joining_date
+    - utter_ask_employee_id
+* share_employee_id
+    - action_joining_date
