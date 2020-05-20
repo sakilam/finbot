@@ -15,6 +15,16 @@ intents:
 - ask_whatspossible
 - request_personal_details
 - request_joining_date
+- request_health_policy
+- request_monthly_gross_deductions
+- request_monthly_deductions
+- request_monthly_earnings
+- request_reporting_manager
+- request_guest_password
+- request_project
+- request_tax_slab
+- request_latest_ctc
+- request_leave_balance
 - share_employee_id
 - chitchat/ask_builder
 - chitchat/ask_howdoing
@@ -36,31 +46,38 @@ entities:
 - personal_details
 - emp_id
 - joined_on
+- tax_slab_chosen
+- gross_deductions
+- deductions
+- earnings
+- reporting_manager
+- project
+- tax_slab
+- guest_wifi_password
+- leave_balance
+- latest_ctc
 responses:
   utter_greet:
-  - text: Hey there, my name is Finbot. How can I help?
-  - text: Hi, I'm Finbot!. How can I help?
-  - text: Hi! My name's Finbot. How can I help?
+  - text: Namasthey!, I am Finbot 😷. Your Personal Assistant! How can I help you?
   utter_noworries:
-  - text: No worries!
-  - text: You're welcome!
-  - text: I'm happy to help.
+  - text: No worries! 🙂
+  - text: You're welcome! 🙂
+  - text: I'm happy to help. 🙂
   utter_anything_else:
-  - text: Is there anything else I can help you with?
+  - text: Is there anything else I can help you with? 😀
   utter_bye:
-  - text: Goodbye!
-  - text: Bye!
+  - text: Thank you and stay safe from Corona.😷
   - text: Ciao!
-  - text: Bye, was nice talking to you!
-  - text: Bye bye!
+  - text: Bye, was nice talking to you! Don't forget to wear mask. 😷
+  - text: Bye bye! 🙂
   utter_what_help:
   - text: Ok, what can I help you with?
   utter_thumbsup:
   - text: 👍
   - text: Okay.
-  - text: Got it.
+  - text: Okay I Got it. 😎
   utter_possibilities:
-  - text: You can ask me about your payroll related quieres
+  - text: You can ask me about HR related quieres.
   utter_react_negative:
   - text: 😕
   - text: 😞
@@ -72,12 +89,12 @@ responses:
   - text: 👏
   - text: 😍
   utter_canthelp:
-  - text: I'm sorry I couldn't help you.
+  - text: Mmmmmm. I'm sorry I couldn't help you. May be I need to learn more.
   utter_nohelp:
   - text: For now that's all I can do, so feel free to try it out. If you have any
       suggestions for what I should learn, let me know!
   utter_source_code:
-  - text: My code is not open source
+  - text: It is very costly to see my source code. Hehe 😊
   utter_what_possible:
   - text: "You can ask me following queries or any other queries related to your payroll.\
       \ \nWhat is my EmployeeID? \nWhat is my payroll status? \nWhat is my Health\
@@ -102,3 +119,13 @@ actions:
 - utter_source_code
 - utter_what_possible
 - utter_ask_employee_id
+- action_health_policy
+- action_monthly_gross_deduction
+- action_monthly_deductions
+- action_monthly_earnings
+- action_reporting_manager
+- action_guest_password
+- action_project
+- action_tax_slab
+- action_latest_ctc
+- action_leave_balance
