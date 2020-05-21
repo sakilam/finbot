@@ -1682,6 +1682,87 @@
 - My Employee Code is [12](emp_id).
 - Here is my employee Code [13](emp_id).
 
+## intent:request_health_policy
+- Please provide my [health_policy_number](health_policy_number)?
+- Share my [health_policy_number](health_policy_number)?
+- My I know my [health_policy_number](health_policy_number)?
+- What is my [health_policy_number](health_policy_number)?
+- [health_policy_number](health_policy_number) please?
+- Let me know my [health_policy_number](health_policy_number)?
+
+## intent:request_monthly_gross_deductions
+- Please provide my [monthly_gross_deductions](gross_deductions)?
+- Share my [monthly_gross_deductions](gross_deductions)?
+- My I know my [monthly_gross_deductions](gross_deductions)?
+- What is my [monthly_gross_deductions](gross_deductions)?
+- [monthly_gross_deductions](gross_deductions) please?
+- Let me know my [monthly_gross_deductions](gross_deductions)?
+
+## intent:request_monthly_deductions
+- Please provide my [monthly_deductions](deductions)?
+- Share my [monthly_deductions](deductions)?
+- My I know my [monthly_deductions](deductions)?
+- What is my [monthly_deductions](deductions)?
+- [monthly_deductions](deductions) please?
+- Let me know my [monthly_deductions](deductions)?
+
+## intent:request_monthly_earnings
+- Please provide my [monthly_earnings](earnings)?
+- Share my [monthly_earnings](earnings)?
+- My I know my [monthly_earnings](earnings)?
+- What is my [monthly_earnings](earnings)?
+- [monthly_earnings](earnings) please?
+- Let me know my [monthly_earnings](earnings)?
+
+## intent:request_reporting_manager
+- Please provide my [reporting_manager](reporting_manager)?
+- Share my [reporting_manager](reporting_manager)?
+- My I know my [reporting_manager](reporting_manager)?
+- What is my [reporting_manager](reporting_manager)?
+- [reporting_manager](reporting_manager) please?
+- Let me know my [reporting_manager](reporting_manager)?
+
+## intent:request_guest_password
+- Please provide my [guest_wifi_password](guest_wifi_password)?
+- Share my [guest_wifi_password](guest_wifi_password)?
+- My I know my [guest_wifi_password](guest_wifi_password)?
+- What is my [guest_wifi_password](guest_wifi_password)?
+- [guest_wifi_password](guest_wifi_password) please?
+- Let me know my [guest_wifi_password](guest_wifi_password)?
+
+## intent:request_project
+- Please provide my [project](project)?
+- Share my [project](project)?
+- My I know my [project](project)?
+- What is my [project](project)?
+- [project](project) please?
+- Let me know my [project](project)?
+- Assigned to which [project](project)?
+
+## intent:request_tax_slab
+- Please provide my [tax_slab](tax_slab)?
+- Share my [tax_slab](tax_slab)?
+- My I know my [tax_slab](tax_slab)?
+- What is my [tax_slab](tax_slab)?
+- [tax_slab](tax_slab) please?
+- Let me know my [tax_slab](tax_slab)?
+
+## intent:request_latest_ctc
+- Please provide my [latest_ctc](latest_ctc)?
+- Share my [latest_ctc](latest_ctc)?
+- My I know my [latest_ctc](latest_ctc)?
+- What is my [latest_ctc](latest_ctc)?
+- [latest_ctc](latest_ctc) please?
+- Let me know my [latest_ctc](latest_ctc)?
+
+## intent:request_leave_balance
+- Please provide my [leave_balance](leave_balance)?
+- Share my [leave_balance](leave_balance)?
+- My I know my [leave_balance](leave_balance)?
+- What is my [leave_balance](leave_balance)?
+- [leave_balance](leave_balance) please?
+- Let me know my [leave_balance](leave_balance)?
+
 ## synonym:all
 - both
 
