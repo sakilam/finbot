@@ -1,0 +1,59 @@
+.rw-conversation-container{
+    width: 550px !important;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+body{
+    background-image: url('https://blog-assets.freshworks.com/freshdesk/wp-content/uploads/2018/08/Header_gif_assembly-1.gif');
+  /*background-image: url('../images/background2.png') ;*/
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.rw-open-launcher {
+    content: url("../images/background.gif");
+}
+.rw-open-launcher__container {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+.rw-launcher img {
+    width: 100% !important;
+    max-height: 100% !important;
+    border-radius: 30px;
+    object-fit: contain;
+}
+.rw-launcher{
+    width:90px !important;
+    height: 90px !important;
+    background-color: whitesmoke !important;
+}
+.rw-close-launcher {
+     content: url("../images/background.gif");
+}
+.rw-close-launcher.rw-default {
+    min-width: 75px!important;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.rw-conversation-container .rw-header{
+    background-color: #21438d !important;
+}
+

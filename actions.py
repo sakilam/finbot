@@ -33,10 +33,8 @@ def _employee_joining_date(data) -> Text:
 def _get_employee_health_insurance_policy(data) -> Text:
     return f"Your health policy number is {data['health_policy_number']}"
 
-
 def _get_monthly_gross_deduction(data) -> Text:
     return f"Your gross deduction is {data['latest_pay_slip']['deductions']['gross_deductions']}"
-
 
 def _get_monthly_deductions(data) -> Text:
     monthlyDeductions = "Your deductions are: \nProfessional Tax: {0},\nProvident Fund: {1},\n" \
@@ -47,7 +45,6 @@ def _get_monthly_deductions(data) -> Text:
                 data['latest_pay_slip']['deductions']['parental_medical_insurance'],
                 data['latest_pay_slip']['deductions']['gross_deductions'])
     return monthlyDeductions
-
 
 def _get_monthly_earnings(data) -> Text:
     monthly_deductions = "Your earnings are: \nBasic: {0},\nHRA: {1},\nSpecial Allowance: {2},\n" \
@@ -111,11 +108,9 @@ class ActionPersonalDetails(Action):
         entities = tracker.latest_message['entities']
         emp_id = None
         response_text = "What is your employee id?"
-        for e in entities:
-            if e['entity'] == "emp_id":
-                emp_id = e["value"]
-                response = _fetch_employee_details(emp_id)
-                response_text = _employee_personal_details(response)
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _employee_personal_details(response)
 
         dispatcher.utter_message(response_text)
         return []
@@ -129,11 +124,9 @@ class ActionJoiningDate(Action):
         entities = tracker.latest_message['entities']
         emp_id = None
         response_text = "What is your employee id?"
-        for e in entities:
-            if e['entity'] == "emp_id":
-                emp_id = e["value"]
-                response = _fetch_employee_details(emp_id)
-                response_text = _employee_joining_date(response)
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _employee_joining_date(response)
 
         dispatcher.utter_message(response_text)
         return []
@@ -147,11 +140,9 @@ class ActionHealthPolicy(Action):
         entities = tracker.latest_message['entities']
         emp_id = None
         response_text = "What is your employee id?"
-        for e in entities:
-            if e['entity'] == "emp_id":
-                emp_id = e["value"]
-                response = _fetch_employee_details(emp_id)
-                response_text = _get_employee_health_insurance_policy(response)
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _get_employee_health_insurance_policy(response)
 
         dispatcher.utter_message(response_text)
         return []
@@ -166,11 +157,9 @@ class ActionMonthlyGrossDeduction(Action):
         entities = tracker.latest_message['entities']
         emp_id = None
         response_text = "What is your employee id?"
-        for e in entities:
-            if e['entity'] == "emp_id":
-                emp_id = e["value"]
-                response = _fetch_employee_details(emp_id)
-                response_text = _get_monthly_gross_deduction(response)
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _get_monthly_gross_deduction(response)
 
         dispatcher.utter_message(response_text)
         return []
@@ -185,11 +174,9 @@ class ActionMonthlyDeductions(Action):
         entities = tracker.latest_message['entities']
         emp_id = None
         response_text = "What is your employee id?"
-        for e in entities:
-            if e['entity'] == "emp_id":
-                emp_id = e["value"]
-                response = _fetch_employee_details(emp_id)
-                response_text = _get_monthly_deductions(response)
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _get_monthly_deductions(response)
 
         dispatcher.utter_message(response_text)
         return []
@@ -204,11 +191,9 @@ class ActionMonthlyEarnings(Action):
         entities = tracker.latest_message['entities']
         emp_id = None
         response_text = "What is your employee id?"
-        for e in entities:
-            if e['entity'] == "emp_id":
-                emp_id = e["value"]
-                response = _fetch_employee_details(emp_id)
-                response_text = _get_monthly_earnings(response)
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _get_monthly_earnings(response)
 
         dispatcher.utter_message(response_text)
         return []
@@ -223,11 +208,9 @@ class ActionReportingManager(Action):
         entities = tracker.latest_message['entities']
         emp_id = None
         response_text = "What is your employee id?"
-        for e in entities:
-            if e['entity'] == "emp_id":
-                emp_id = e["value"]
-                response = _fetch_employee_details(emp_id)
-                response_text = _get_reporting_manager(response)
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _get_reporting_manager(response)
 
         dispatcher.utter_message(response_text)
         return []
@@ -254,11 +237,9 @@ class ActionProject(Action):
         entities = tracker.latest_message['entities']
         emp_id = None
         response_text = "What is your employee id?"
-        for e in entities:
-            if e['entity'] == "emp_id":
-                emp_id = e["value"]
-                response = _fetch_employee_details(emp_id)
-                response_text = _get_project(response)
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _get_project(response)
 
         dispatcher.utter_message(response_text)
         return []
@@ -273,15 +254,12 @@ class ActionTaxSlab(Action):
         entities = tracker.latest_message['entities']
         emp_id = None
         response_text = "What is your employee id?"
-        for e in entities:
-            if e['entity'] == "emp_id":
-                emp_id = e["value"]
-                response = _fetch_employee_details(emp_id)
-                response_text = _get_tax_slab(response)
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _get_tax_slab(response)
 
         dispatcher.utter_message(response_text)
         return []
-
 
 class ActionLatestCTC(Action):
 
@@ -292,15 +270,12 @@ class ActionLatestCTC(Action):
         entities = tracker.latest_message['entities']
         emp_id = None
         response_text = "What is your employee id?"
-        for e in entities:
-            if e['entity'] == "emp_id":
-                emp_id = e["value"]
-                response = _fetch_employee_details(emp_id)
-                response_text = _latest_ctc(response)
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _latest_ctc(response)
 
         dispatcher.utter_message(response_text)
         return []
-
 
 class ActionLeaveBalance(Action):
 
@@ -311,11 +286,37 @@ class ActionLeaveBalance(Action):
         entities = tracker.latest_message['entities']
         emp_id = None
         response_text = "What is your employee id?"
-        for e in entities:
-            if e['entity'] == "emp_id":
-                emp_id = e["value"]
-                response = _fetch_employee_details(emp_id)
-                response_text = _get_leave_balance(response)
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(Empid)
+        response_text = _get_leave_balance(response)
 
         dispatcher.utter_message(response_text)
+        return []
+
+class ActionGetEmployeeId(Action):
+
+    def name(self) -> Text:
+        return "action_get_employee_id"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        Empid = tracker.get_slot("emp_id")
+        print(Empid)
+        # dispatcher.utter_message("Hi {}, Welcome to the Payroll Chatbot!, How may I help you?".format(Name))
+        dispatcher.utter_template("utter_capture_empid",tracker)
+        return []
+
+class ActionGetWeatherDetails(Action):
+
+    def name(self) -> Text:
+        return "action_weather_api"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        city = tracker.get_slot("location")
+        temp = int(fetchWeatherinfo(city)['temp'] - 273)
+        dispatcher.utter_template("utter_temp", tracker, temp=temp, city=city)
+
         return []

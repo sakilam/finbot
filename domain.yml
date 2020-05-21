@@ -1,5 +1,5 @@
 session_config:
-  session_expiration_time: 60
+  session_expiration_time: 1
   carry_over_slots_to_new_session: true
 intents:
 - affirm
@@ -39,6 +39,19 @@ intents:
 - chitchat/ask_wherefrom
 - chitchat/ask_whoisit
 - chitchat/telljoke
+- additionallinks
+- weather
+- cities
+- fbp
+- attendance
+- operations
+- infrastructure
+- travelrealated
+- typesofleave
+- holidaycalendar
+- hyderabad_calendar
+- bangalore_calendar
+- out_of_scope
 entities:
 - name
 - language
@@ -57,15 +70,24 @@ entities:
 - leave_balance
 - latest_ctc
 - health_policy_number
+slots:
+  emp_id:
+    type: unfeaturized
+  location:
+    type: text
+  name:
+    type: text
 responses:
   utter_greet:
-  - text: Namasthey!, I am Finbot 😷. Your Personal Assistant! How can I help you?
+  - text: Namasthey!, I am Finbot 😷. Your Personal Assistant!
   utter_noworries:
   - text: No worries! 🙂
   - text: You're welcome! 🙂
   - text: I'm happy to help. 🙂
   utter_anything_else:
-  - text: Is there anything else I can help you with? 😀
+  - text: "I have something more for you if you would like to explore about our organization.\
+  \n Here's the link for [HR berry] (https://www.hrberry.com/smarthr/index.php?q=cms&m=index&client=atmecs)\
+  \n Here's the link for [Aspire] (https://aspire.atmecs.online/login)"
   utter_bye:
   - text: Thank you and stay safe from Corona.😷
   - text: Ciao!
@@ -73,6 +95,9 @@ responses:
   - text: Bye bye! 🙂
   utter_what_help:
   - text: Ok, what can I help you with?
+  utter_thanks_for_the_details:
+  - text: Thank you, What can I help you with?
+  - text: Thanks for the details, how can I help you?
   utter_thumbsup:
   - text: 👍
   - text: Okay.
@@ -97,11 +122,52 @@ responses:
   utter_source_code:
   - text: It is very costly to see my source code. Hehe 😊
   utter_what_possible:
-  - text: "You can ask me following queries or any other queries related to your payroll.\
-      \ \nWhat is my EmployeeID? \nWhat is my payroll status? \nWhat is my Health\
-      \ insurance policy number?"
+  - text: 'You can ask me following queries :'
+    buttons:
+    - title: Payroll/HR/Organisation related queries
+      payload: additionallinks
+    - title: I can tell a joke
+      payload: Can you tell a joke?
+    - title: I can tell you about the weather
+      payload: temperature today
+    - title: About me
+      payload: What is your name?
   utter_ask_employee_id:
-  - text: What is your Employee Id?
+  - text: Could you please provide your Employee Id?
+  utter_deny_accept:
+  - text: Is there anything else I can help you with?
+    buttons:
+      - title: Yes
+        payload: /ask_whatspossible
+      - title: No
+        payload: /deny
+  utter_capture_empid:
+  - text: Please enter your empid, to proceed further
+  utter_city:
+  - text: Which city you want to check for?
+  utter_temp:
+  - text: Today's temperature in {city} is {temp} degree Celcius.
+  utter_fbp:
+  - text: "Login to Aspire -> Human Resources -> Flexible benefit Plan Components\
+        \ Declaration \n Here is the link to [Aspire](https://aspire.atmecs.online/login)"
+  utter_attendance:
+  - text: "Login to HR Berry -> My Attendance. \nHere is the link to [HRBerry](https://www.hrberry.com/smarthr/index.php?q=cms&m=index&client=atmecs)"
+  utter_applyleave:
+  - text: "Login to HR Berry -> Leave. \nHere is the link to [HRBerry](https://www.hrberry.com/smarthr/index.php?q=cms&m=index&client=atmecs)"
+  utter_travelrelated:
+  - text: "For travel and Immigration related please reach out to \n raj.murgesan@atmecs.com"
+  utter_operations:
+  - text: "For Operations related please reach out to \n narsimha.mukkera@atmecs.com\
+           \n babu.krishnan@atmecs.com"
+  utter_infrastructure:
+  - text: "For Infrastructure related please reach out to \ngiridhar.obulesugari@atmecs.com\
+         \nTo raise a ticket Navigate to Aspire -> HumanResources -> IT Help Desk \n\
+           Here is the link to [Aspire](https://aspire.atmecs.online/login)"
+  utter_holidaycalendar_city:
+  - text: 'here is the holiday calendar'
+    attachment: { "type":"image", "payload":{ "src": "static/images/Hyderabad_holiday_Calendar.jpg" } }
+
+        
 actions:
 - respond_chitchat
 - action_personal_details
@@ -130,3 +196,5 @@ actions:
 - action_tax_slab
 - action_latest_ctc
 - action_leave_balance
+- action_get_employee_id
+- action_weather_api

@@ -1681,6 +1681,10 @@
 - This is my employee code [11](emp_id).
 - My Employee Code is [12](emp_id).
 - Here is my employee Code [13](emp_id).
+- My id is [1253](emp_id)
+- My id is [6](emp_id)
+- My empid is [847](emp_id)
+- [304](emp_id)
 
 ## intent:request_health_policy
 - Please provide my [health_policy_number](health_policy_number)?
@@ -1762,6 +1766,125 @@
 - What is my [leave_balance](leave_balance)?
 - [leave_balance](leave_balance) please?
 - Let me know my [leave_balance](leave_balance)?
+
+## intent:additionallinks
+- What additional details can you share?
+- organisation details
+- more policies
+- more information
+- supporting details
+- links
+- HRBerry
+- Aspire
+
+## intent:out_of_scope
+- I want to order food
+- What is 2 + 2?
+- Who’s the US President?
+- I need a job
+- Who is the PrimeMinister of our Country?
+
+## intent:weather
+- what's the weather
+- i want to know the weather of today
+- tell me the weather forecast
+- how's the weather today
+- temperature today
+- weather outside
+- tell me about the weather
+
+## intent:cities
+- [Hyderabad](location)
+- [Ahmedabad](location)
+- [Jaipur](location)
+- [pune](location)
+- [mumbai](location)
+- [chennai](location)
+- [Delhi](location)
+- [Lucknow](location)
+- [Jaipur](location)
+- [Patna](location)
+- [chandigarh](location)
+
+## intent:fbp
+- Where can I declare my fbp?
+- Flexible benefit plan components declaration
+- fbp declaration?
+- what is flexible benefit plan
+- what is fbp
+- help me find flexible benefit plan
+
+## intent:attendance
+- Where Can I check my attendance
+- attendance related queries
+- attendance check
+- where can I check my swipe in swipe out
+- swipe in time
+- swipe out time
+- where can I check my work hours
+- my work hours
+- my total time
+
+## intent:operations
+- whom can I reach for Operations related
+- who is the Admin in our organisation
+- housekeeping related complaints
+- Admin related queries
+
+## intent:travelrealated
+- whom can I reach for travel related queries
+- travel related
+- immigration related queries
+- travel and immigration
+- visa processing
+
+## intent:infrastructure
+- Whom should I reach out for my system issues
+- system issues
+- laptop issues
+- hardware upgrade
+- RAM Issues
+- system software issues
+- system startup problems
+- software installation
+- laptop not working
+- laptop issues
+- RAM upgrade
+- infrastructure related
+
+## intent:holidaycalendar
+- Holiday Calendar
+- holiday list for [hyderabad](location)
+- holiday list for [Bangalore](location)
+- where can I check the holiday calendar
+- when is the next holiday
+- any holidays this month?
+- any long weekends?
+- festivals this month
+- when is the next holiday?
+- time off?
+- when is the company holiday?
+- where can I find the holiday calendar
+- Please show me list of holidays
+- holiday calendar for [Hyderabad](location)
+
+## intent:typesofleave
+- what types of leave are there
+- different types of leave
+- types of leaves
+- leave types
+
+## intent:bangalore_calendar
+- what is holiday Calendar for [Bangalore](location)
+- [Bangalore](location)
+- holiday list
+- festivals list
+
+## intent:hyderabad_calendar
+- what is holiday Calendar for [Hyderabad](location)
+- [Hyderabad](location)
+- holiday list
+- festivals list
 
 ## synonym:all
 - both
