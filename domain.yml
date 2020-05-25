@@ -54,6 +54,8 @@ intents:
 - out_of_scope
 - request_earned_leave_balance
 - request_casual_leave_balance
+- request_food_plus_card_amount
+- request_tax_slab_chosen
 entities:
 - name
 - language
@@ -74,6 +76,7 @@ entities:
 - health_policy_number
 - earned_leave_balance
 - casual_leave_balance
+- food_plus_card_amount
 slots:
   emp_details:
     type: unfeaturized
@@ -219,3 +222,5 @@ actions:
 - utter_holidaycalendar_city
 - action_earned_leave_balance
 - action_casual_leave_balance
+- action_tax_slab_chosen
+- action_food_plus_card_amount

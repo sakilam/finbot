@@ -1752,6 +1752,7 @@
 - Let me know my [tax_slab](tax_slab)?
 
 ## intent:request_latest_ctc
+- What is my [cost to the company](latest_ctc) for the whole year?
 - Please provide my [latest_ctc](latest_ctc)?
 - Share my [latest_ctc](latest_ctc)?
 - My I know my [latest_ctc](latest_ctc)?
@@ -1901,6 +1902,22 @@
 - [Hyderabad](location)
 - holiday list
 - festivals list
+
+## intent:request_food_plus_card_amount 
+- Please provide my [food plus card amount](food_plus_card_amount)?
+- Share my [food plus card amount](food_plus_card_amount)?
+- My I know my [food plus card amount](food_plus_card_amount)?
+- What is my [food plus card amount](food_plus_card_amount)?
+- [food plus card amount](food_plus_card_amount) please?
+- Let me know my [food plus card amount](food_plus_card_amount)?
+
+## intent:request_tax_slab_chosen
+- Please provide my [chosen tax slab](tax_slab_chosen) 
+- Share my [chosen tax_slab](tax_slab_chosen)?
+- My I know my [chosen tax_slab](tax_slab_chosen)?
+- What is my [chosen_tax_slab](tax_slab_chosen)?
+- [chosen_tax_slab](tax_slab_chosen) please?
+- Let me know my [chosen tax_slab](tax_slab_chosen)?
 
 ## synonym:all
 - both

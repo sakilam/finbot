@@ -113,6 +113,12 @@ def _get_casual_leave_balance(data) -> Text:
     casual_leave_balance = "Your casual leave balance is: {0}".format(data["leave_balance"]["casual_leave"])
     return casual_leave_balance
 
+def _get_tax_slab_chosen(data) -> Text:
+    return f"The tax slab you have chosen is {data['tax_slab_chosen']}"
+
+def _get_food_plus_card_amount(data) -> Text:
+    return f"Your monthly food plus card amount is {data['latest_ctc']['month']['food_plus_card']}"
+
 class ActionPersonalDetails(Action):
 
     def name(self) -> Text:
@@ -258,15 +264,8 @@ class ActionTaxSlab(Action):
         return "action_tax_slab"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        entities = tracker.latest_message['entities']
-        emp_id = None
-        response_text = "What is your employee id?"
-        Empid = tracker.get_slot("emp_id")
-        response = _fetch_employee_details(tracker, Empid)
-        response_text = _get_tax_slab(response)
-
-        dispatcher.utter_message(response_text)
-        return _set_emp_details_slot(tracker, response)
+        dispatcher.utter_message(text="Difference b/w old & new tax slab", attachment={ "type":"image", "payload":{ "src": "static/images/tax_slabs.JPG" } })
+        return []
 
 class ActionLatestCTC(Action):
 
@@ -355,6 +354,38 @@ class ActionCasualLeaveBalance(Action):
         Empid = tracker.get_slot("emp_id")
         response = _fetch_employee_details(tracker, Empid)
         response_text = _get_casual_leave_balance(response)
+
+        dispatcher.utter_message(response_text)
+        return _set_emp_details_slot(tracker, response)
+
+class ActionTaxSlabChosen(Action):
+
+    def name(self) -> Text:
+        return "action_tax_slab_chosen"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        entities = tracker.latest_message['entities']
+        emp_id = None
+        response_text = "What is your employee id?"
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(tracker, Empid)
+        response_text = _get_tax_slab_chosen(response)
+
+        dispatcher.utter_message(response_text)
+        return _set_emp_details_slot(tracker, response)
+
+class ActionFoodPlusCardAmount(Action):
+
+    def name(self) -> Text:
+        return "action_food_plus_card_amount"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        entities = tracker.latest_message['entities']
+        emp_id = None
+        response_text = "What is your employee id?"
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(tracker, Empid)
+        response_text = _get_food_plus_card_amount(response)
 
         dispatcher.utter_message(response_text)
         return _set_emp_details_slot(tracker, response)

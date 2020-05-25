@@ -399,6 +399,25 @@
     - utter_operations
     - utter_deny_accept
 
+## greet food plus card amount
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* request_food_plus_card_amount
+    - action_food_plus_card_amount
+
+## greet tax slab chosen
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* request_tax_slab_chosen
+    - action_tax_slab_chosen
+    - action_tax_slab
+
 ## askholidaycalendar
 * holidaycalendar
     - utter_holidaycalendar_city
