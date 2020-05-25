@@ -8,209 +8,6 @@
     - utter_infrastructure
     - utter_deny_accept
 
-## thanks
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* thank
-    - utter_noworries
-    - utter_anything_else
-
-## thanks what possible
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* thank
-    - utter_noworries
-    - utter_anything_else
-* ask_whatspossible
-    - utter_what_possible
-
-## bye
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* bye
-    - utter_bye
-
-## anything else? - yes
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-    - utter_anything_else
-* affirm
-    - utter_what_help
-
-## anything else? - no
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-    - utter_anything_else
-* deny
-    - utter_thumbsup
-
-## positive reaction
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* react_positive
-    - utter_react_positive
-
-## negative reaction
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* react_negative
-    - utter_react_negative
-
-## source code
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* source_code
-    - utter_source_code
-    - utter_anything_else
-
-## greet chitchat
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* chitchat
-    - respond_chitchat
-
-## greet chitchat what possible
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* chitchat
-    - respond_chitchat
-* ask_whatspossible
-    - utter_what_possible
-
-## chitchat
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* chitchat
-    - respond_chitchat
-
-## deny chitchat
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* chitchat
-    - respond_chitchat
-* deny
-    - utter_nohelp
-
-## more chitchat
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* chitchat
-    - respond_chitchat
-* chitchat
-    - respond_chitchat
-
-## more chitchat what possible
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* chitchat
-    - respond_chitchat
-* chitchat
-    - respond_chitchat
-* ask_whatspossible
-    - utter_what_possible
-
-## more chitchat
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* chitchat
-    - respond_chitchat
-* chitchat
-    - respond_chitchat
-* chitchat
-    - respond_chitchat
-* chitchat
-    - respond_chitchat
-
-## more chitchat what possible
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* chitchat
-    - respond_chitchat
-* chitchat
-    - respond_chitchat
-* chitchat
-    - respond_chitchat
-* chitchat
-    - respond_chitchat
-* ask_whatspossible
-    - utter_what_possible
-
-## greet greet chitchat
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* greet
-    - utter_greet
-* chitchat
-    - respond_chitchat
-* chitchat
-    - respond_chitchat
-
-## greet greet chitchat what possible
-* greet
-    - utter_greet
-    - utter_ask_employee_id
-* share_employee_id
-    - utter_thanks_for_the_details
-* greet
-    - utter_greet
-* chitchat
-    - respond_chitchat
-* chitchat
-    - respond_chitchat
-* ask_whatspossible
-    - utter_what_possible
-
 ## greet personal details
 * greet
     - utter_greet
@@ -421,3 +218,206 @@
 ## askholidaycalendar
 * holidaycalendar
     - utter_holidaycalendar_city
+
+## thanks
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* thank
+    - utter_noworries
+    - utter_anything_else
+
+## thanks what possible
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* thank
+    - utter_noworries
+    - utter_anything_else
+* ask_whatspossible
+    - utter_what_possible
+
+## bye
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* bye
+    - utter_bye
+
+## anything else? - yes
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+    - utter_anything_else
+* affirm
+    - utter_what_help
+
+## anything else? - no
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+    - utter_anything_else
+* deny
+    - utter_thumbsup
+
+## positive reaction
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* react_positive
+    - utter_react_positive
+
+## negative reaction
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* react_negative
+    - utter_react_negative
+
+## source code
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* source_code
+    - utter_source_code
+    - utter_anything_else
+
+## greet chitchat
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* chitchat
+    - respond_chitchat
+
+## greet chitchat what possible
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* chitchat
+    - respond_chitchat
+* ask_whatspossible
+    - utter_what_possible
+
+## chitchat
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* chitchat
+    - respond_chitchat
+
+## deny chitchat
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* chitchat
+    - respond_chitchat
+* deny
+    - utter_nohelp
+
+## more chitchat
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+
+## more chitchat what possible
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* ask_whatspossible
+    - utter_what_possible
+
+## more chitchat
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+
+## more chitchat what possible
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* ask_whatspossible
+    - utter_what_possible
+
+## greet greet chitchat
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* greet
+    - utter_greet
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+
+## greet greet chitchat what possible
+* greet
+    - utter_greet
+    - utter_ask_employee_id
+* share_employee_id
+    - utter_thanks_for_the_details
+* greet
+    - utter_greet
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* ask_whatspossible
+    - utter_what_possible

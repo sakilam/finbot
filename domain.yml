@@ -94,7 +94,7 @@ responses:
   - text: You're welcome! 🙂
   - text: I'm happy to help. 🙂
   utter_anything_else:
-  - text: "I have something more for you if you would like to explore about our organization.\n\
+  - text: "I have something more for you. \n If you would like to explore about our organization.\n\
       \ Here's the link for [HR berry] (https://www.hrberry.com/smarthr/index.php?q=cms&m=index&client=atmecs)\n\
       \ Here's the link for [Aspire] (https://aspire.atmecs.online/login)"
   utter_bye:
@@ -126,8 +126,8 @@ responses:
   utter_canthelp:
   - text: Mmmmmm. I'm sorry I couldn't help you. May be I need to learn more.
   utter_nohelp:
-  - text: For now that's all I can do, so feel free to try it out. If you have any
-      suggestions for what I should learn, let me know!
+  - text: "For now that's all I can do, so feel free to try it out. \n If you have any
+      suggestions for what I should learn, let me know!"
   utter_source_code:
   - text: It is very costly to see my source code. Hehe 😊
   utter_what_possible:
@@ -135,8 +135,6 @@ responses:
     buttons:
     - title: Payroll/HR/Organisation related queries
       payload: additionallinks
-    - title: I can tell a joke
-      payload: Can you tell a joke?
     - title: I can tell you about the weather
       payload: temperature today
     - title: About me
@@ -157,7 +155,7 @@ responses:
   utter_temp:
   - text: Today's temperature in {city} is {temp} degree Celcius.
   utter_fbp:
-  - text: "Login to Aspire -> Human Resources -> Flexible benefit Plan Components\
+  - text: "Login to Aspire -> Human Resources \n -> Flexible benefit Plan Components\
       \ Declaration \n Here is the link to [Aspire](https://aspire.atmecs.online/login)"
   utter_attendance:
   - text: "Login to HR Berry -> My Attendance. \nHere is the link to [HRBerry](https://www.hrberry.com/smarthr/index.php?q=cms&m=index&client=atmecs)"
