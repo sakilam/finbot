@@ -105,6 +105,14 @@ def _get_leave_balance(data) -> Text:
                 data["leave_balance"]["total_leaves"])
     return leave_balance
 
+def _get_earned_leave_balance(data) -> Text:
+    earned_leave_balance = "Your earned leave balance is: {0}".format(data["leave_balance"]["earned_leave"])
+    return earned_leave_balance
+
+def _get_casual_leave_balance(data) -> Text:
+    casual_leave_balance = "Your casual leave balance is: {0}".format(data["leave_balance"]["casual_leave"])
+    return casual_leave_balance
+
 class ActionPersonalDetails(Action):
 
     def name(self) -> Text:
@@ -317,4 +325,36 @@ class ActionGetWeatherDetails(Action):
         temp = int(fetchWeatherinfo(city)['temp'] - 273)
         dispatcher.utter_template("utter_temp", tracker, temp=temp, city=city)
 
+        return _set_emp_details_slot(tracker, response)
+
+class ActionEarnedLeaveBalance(Action):
+
+    def name(self) -> Text:
+        return "action_earned_leave_balance"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        entities = tracker.latest_message['entities']
+        emp_id = None
+        response_text = "What is your employee id?"
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(tracker, Empid)
+        response_text = _get_earned_leave_balance(response)
+
+        dispatcher.utter_message(response_text)
+        return _set_emp_details_slot(tracker, response)
+
+class ActionCasualLeaveBalance(Action):
+
+    def name(self) -> Text:
+        return "action_casual_leave_balance"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        entities = tracker.latest_message['entities']
+        emp_id = None
+        response_text = "What is your employee id?"
+        Empid = tracker.get_slot("emp_id")
+        response = _fetch_employee_details(tracker, Empid)
+        response_text = _get_casual_leave_balance(response)
+
+        dispatcher.utter_message(response_text)
         return _set_emp_details_slot(tracker, response)

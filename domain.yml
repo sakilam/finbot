@@ -52,6 +52,8 @@ intents:
 - hyderabad_calendar
 - bangalore_calendar
 - out_of_scope
+- request_earned_leave_balance
+- request_casual_leave_balance
 entities:
 - name
 - language
@@ -70,6 +72,8 @@ entities:
 - leave_balance
 - latest_ctc
 - health_policy_number
+- earned_leave_balance
+- casual_leave_balance
 slots:
   emp_details:
     type: unfeaturized
@@ -213,3 +217,5 @@ actions:
 - utter_operations
 - utter_infrastructure
 - utter_holidaycalendar_city
+- action_earned_leave_balance
+- action_casual_leave_balance
