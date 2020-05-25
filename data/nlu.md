@@ -1768,21 +1768,21 @@
 - [leave_balance](leave_balance) please?
 - Let me know my [leave_balance](leave_balance)?
 
-## intent:request_earned_leave_balance
+<!-- ## intent:request_earned_leave_balance
 - Please provide my [earned leave balance](earned_leave_balance)?
 - Share my [earned leave balance](earned_leave_balance)?
 - My I know my [earned leave balance](earned_leave_balance)?
 - What is my [earned leave balance](earned_leave_balance)?
 - [earned leave balance](earned_leave_balance) please?
-- Let me know my [earned leave balance](earned_leave_balance)?
+- Let me know my [earned leave balance](earned_leave_balance)? -->
 
-## intent:request_casual_leave_balance
+<!-- ## intent:request_casual_leave_balance
 - Please provide my [casual leave balance](casual_leave_balance)?
 - Share my [casual leave balance](casual_leave_balance)?
 - My I know my [casual leave balance](casual_leave_balance)?
 - What is my [casual leave balance](casual_leave_balance)?
 - [casual leave balance](casual_leave_balance) please?
-- Let me know my [casual leave balance](casual_leave_balance)?
+- Let me know my [casual leave balance](casual_leave_balance)? -->
 
 ## intent:additionallinks
 - What additional details can you share?
@@ -1930,3 +1930,6 @@
 
 ## regex:greet
 - hey[^\s]*
+
+## regex:emp_id
+- [0-9]

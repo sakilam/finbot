@@ -116,7 +116,7 @@
 * request_leave_balance
     - action_leave_balance
 
-## greet earned leave balance
+<!-- ## greet earned leave balance
 * greet
     - utter_greet
     - utter_ask_employee_id
@@ -132,7 +132,7 @@
 * share_employee_id
     - utter_thanks_for_the_details
 * request_casual_leave_balance
-    - action_casual_leave_balance
+    - action_casual_leave_balance -->
 
 # additionaldetails
 * additionallinks
