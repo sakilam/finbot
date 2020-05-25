@@ -57,3 +57,9 @@ body{
     background-color: #21438d !important;
 }
 
+.rw-markdown p {
+  margin: 10px;
+  overflow-wrap: break-word !important;
+  display:inline-block ;
+  white-space: pre;
+}
