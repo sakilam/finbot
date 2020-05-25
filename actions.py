@@ -1,5 +1,6 @@
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
+from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 import requests
 
@@ -10,8 +11,20 @@ ENDPOINT = {
 def _create_path(value: Text) -> Text:
     return ENDPOINT["base"].format(value)
 
-def _fetch_employee_details(value: Text) -> Text:
-    return requests.get(_create_path(value)).json()
+def _fetch_employee_details(tracker, value: Text) -> Text:
+    emp_details = tracker.get_slot("emp_details")
+    if emp_details == None:
+        emp_details = requests.get(_create_path(value)).json()
+        return emp_details
+    else:
+        return emp_details
+
+def _set_emp_details_slot(tracker, response):
+    emp_details = tracker.get_slot("emp_details")
+    if emp_details == None:
+        return [SlotSet("emp_details", response)]
+    else:
+        return []
 
 def _employee_personal_details(data) -> Text:
     emp_data = "Employee Name: " + data["personal_details"]["emp_name"] + "\n"
@@ -57,22 +70,17 @@ def _get_monthly_earnings(data) -> Text:
                 data['latest_pay_slip']['earnings']['gross_earnings'])
     return monthly_deductions
 
-
 def _get_reporting_manager(data) -> Text:
     return f"Your reporting manager is {data['reporting_manager']}"
-
 
 def _get_wifi_password(data) -> Text:
     return "Welcome@123"
 
-
 def _get_project(data) -> Text:
     return f"Your are assigned to {data['project']}"
 
-
 def _get_tax_slab(data) -> Text:
     return "New Tax Slab is: {0}\nOld Tax Slab is:{1}".format(data['tax_slab']['new'], data['tax_slab']['old'])
-
 
 def _latest_ctc(data) -> Text:
     year_ctc = "Your yearly CTC below: \nBasic: {0},\nHRA: {1},\nLTA: {2},\n" \
@@ -90,14 +98,12 @@ def _latest_ctc(data) -> Text:
                 data['latest_ctc']['year']['cost_to_company'])
     return year_ctc
 
-
 def _get_leave_balance(data) -> Text:
     leave_balance = "Your leave balances are: \nEarned Leave: {0},\nCasual Leave: {1},\nTotal Leaves: {2},\n" \
         .format(data["leave_balance"]["earned_leave"],
                 data["leave_balance"]["casual_leave"],
                 data["leave_balance"]["total_leaves"])
     return leave_balance
-
 
 class ActionPersonalDetails(Action):
 
@@ -109,11 +115,11 @@ class ActionPersonalDetails(Action):
         emp_id = None
         response_text = "What is your employee id?"
         Empid = tracker.get_slot("emp_id")
-        response = _fetch_employee_details(Empid)
+        response = _fetch_employee_details(tracker, Empid)
         response_text = _employee_personal_details(response)
 
         dispatcher.utter_message(response_text)
-        return []
+        return _set_emp_details_slot(tracker, response)
 
 class ActionJoiningDate(Action):
 
@@ -125,11 +131,11 @@ class ActionJoiningDate(Action):
         emp_id = None
         response_text = "What is your employee id?"
         Empid = tracker.get_slot("emp_id")
-        response = _fetch_employee_details(Empid)
+        response = _fetch_employee_details(tracker, Empid)
         response_text = _employee_joining_date(response)
 
         dispatcher.utter_message(response_text)
-        return []
+        return _set_emp_details_slot(tracker, response)
 
 class ActionHealthPolicy(Action):
 
@@ -141,12 +147,11 @@ class ActionHealthPolicy(Action):
         emp_id = None
         response_text = "What is your employee id?"
         Empid = tracker.get_slot("emp_id")
-        response = _fetch_employee_details(Empid)
+        response = _fetch_employee_details(tracker, Empid)
         response_text = _get_employee_health_insurance_policy(response)
 
         dispatcher.utter_message(response_text)
-        return []
-
+        return _set_emp_details_slot(tracker, response)
 
 class ActionMonthlyGrossDeduction(Action):
 
@@ -158,12 +163,11 @@ class ActionMonthlyGrossDeduction(Action):
         emp_id = None
         response_text = "What is your employee id?"
         Empid = tracker.get_slot("emp_id")
-        response = _fetch_employee_details(Empid)
+        response = _fetch_employee_details(tracker, Empid)
         response_text = _get_monthly_gross_deduction(response)
 
         dispatcher.utter_message(response_text)
-        return []
-
+        return _set_emp_details_slot(tracker, response)
 
 class ActionMonthlyDeductions(Action):
 
@@ -175,12 +179,11 @@ class ActionMonthlyDeductions(Action):
         emp_id = None
         response_text = "What is your employee id?"
         Empid = tracker.get_slot("emp_id")
-        response = _fetch_employee_details(Empid)
+        response = _fetch_employee_details(tracker, Empid)
         response_text = _get_monthly_deductions(response)
 
         dispatcher.utter_message(response_text)
-        return []
-
+        return _set_emp_details_slot(tracker, response)
 
 class ActionMonthlyEarnings(Action):
 
@@ -192,12 +195,11 @@ class ActionMonthlyEarnings(Action):
         emp_id = None
         response_text = "What is your employee id?"
         Empid = tracker.get_slot("emp_id")
-        response = _fetch_employee_details(Empid)
+        response = _fetch_employee_details(tracker, Empid)
         response_text = _get_monthly_earnings(response)
 
         dispatcher.utter_message(response_text)
-        return []
-
+        return _set_emp_details_slot(tracker, response)
 
 class ActionReportingManager(Action):
 
@@ -209,12 +211,11 @@ class ActionReportingManager(Action):
         emp_id = None
         response_text = "What is your employee id?"
         Empid = tracker.get_slot("emp_id")
-        response = _fetch_employee_details(Empid)
+        response = _fetch_employee_details(tracker, Empid)
         response_text = _get_reporting_manager(response)
 
         dispatcher.utter_message(response_text)
-        return []
-
+        return _set_emp_details_slot(tracker, response)
 
 class ActionGuestPassword(Action):
 
@@ -225,8 +226,7 @@ class ActionGuestPassword(Action):
         entities = tracker.latest_message['entities']
 
         dispatcher.utter_message('Guest wifi password is WelcomeAtmecs@123')
-        return []
-
+        return _set_emp_details_slot(tracker, response)
 
 class ActionProject(Action):
 
@@ -238,12 +238,11 @@ class ActionProject(Action):
         emp_id = None
         response_text = "What is your employee id?"
         Empid = tracker.get_slot("emp_id")
-        response = _fetch_employee_details(Empid)
+        response = _fetch_employee_details(tracker, Empid)
         response_text = _get_project(response)
 
         dispatcher.utter_message(response_text)
-        return []
-
+        return _set_emp_details_slot(tracker, response)
 
 class ActionTaxSlab(Action):
 
@@ -255,11 +254,11 @@ class ActionTaxSlab(Action):
         emp_id = None
         response_text = "What is your employee id?"
         Empid = tracker.get_slot("emp_id")
-        response = _fetch_employee_details(Empid)
+        response = _fetch_employee_details(tracker, Empid)
         response_text = _get_tax_slab(response)
 
         dispatcher.utter_message(response_text)
-        return []
+        return _set_emp_details_slot(tracker, response)
 
 class ActionLatestCTC(Action):
 
@@ -271,11 +270,11 @@ class ActionLatestCTC(Action):
         emp_id = None
         response_text = "What is your employee id?"
         Empid = tracker.get_slot("emp_id")
-        response = _fetch_employee_details(Empid)
+        response = _fetch_employee_details(tracker, Empid)
         response_text = _latest_ctc(response)
 
         dispatcher.utter_message(response_text)
-        return []
+        return _set_emp_details_slot(tracker, response)
 
 class ActionLeaveBalance(Action):
 
@@ -287,11 +286,11 @@ class ActionLeaveBalance(Action):
         emp_id = None
         response_text = "What is your employee id?"
         Empid = tracker.get_slot("emp_id")
-        response = _fetch_employee_details(Empid)
+        response = _fetch_employee_details(tracker, Empid)
         response_text = _get_leave_balance(response)
 
         dispatcher.utter_message(response_text)
-        return []
+        return _set_emp_details_slot(tracker, response)
 
 class ActionGetEmployeeId(Action):
 
@@ -302,10 +301,9 @@ class ActionGetEmployeeId(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         Empid = tracker.get_slot("emp_id")
-        print(Empid)
         # dispatcher.utter_message("Hi {}, Welcome to the Payroll Chatbot!, How may I help you?".format(Name))
         dispatcher.utter_template("utter_capture_empid",tracker)
-        return []
+        return _set_emp_details_slot(tracker, response)
 
 class ActionGetWeatherDetails(Action):
 
@@ -319,4 +317,4 @@ class ActionGetWeatherDetails(Action):
         temp = int(fetchWeatherinfo(city)['temp'] - 273)
         dispatcher.utter_template("utter_temp", tracker, temp=temp, city=city)
 
-        return []
+        return _set_emp_details_slot(tracker, response)

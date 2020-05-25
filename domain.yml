@@ -71,6 +71,8 @@ entities:
 - latest_ctc
 - health_policy_number
 slots:
+  emp_details:
+    type: unfeaturized
   emp_id:
     type: unfeaturized
   location:
@@ -85,9 +87,9 @@ responses:
   - text: You're welcome! 🙂
   - text: I'm happy to help. 🙂
   utter_anything_else:
-  - text: "I have something more for you if you would like to explore about our organization.\
-  \n Here's the link for [HR berry] (https://www.hrberry.com/smarthr/index.php?q=cms&m=index&client=atmecs)\
-  \n Here's the link for [Aspire] (https://aspire.atmecs.online/login)"
+  - text: "I have something more for you if you would like to explore about our organization.\n\
+      \ Here's the link for [HR berry] (https://www.hrberry.com/smarthr/index.php?q=cms&m=index&client=atmecs)\n\
+      \ Here's the link for [Aspire] (https://aspire.atmecs.online/login)"
   utter_bye:
   - text: Thank you and stay safe from Corona.😷
   - text: Ciao!
@@ -137,10 +139,10 @@ responses:
   utter_deny_accept:
   - text: Is there anything else I can help you with?
     buttons:
-      - title: Yes
-        payload: /ask_whatspossible
-      - title: No
-        payload: /deny
+    - title: Yes
+      payload: /ask_whatspossible
+    - title: No
+      payload: /deny
   utter_capture_empid:
   - text: Please enter your empid, to proceed further
   utter_city:
@@ -149,7 +151,7 @@ responses:
   - text: Today's temperature in {city} is {temp} degree Celcius.
   utter_fbp:
   - text: "Login to Aspire -> Human Resources -> Flexible benefit Plan Components\
-        \ Declaration \n Here is the link to [Aspire](https://aspire.atmecs.online/login)"
+      \ Declaration \n Here is the link to [Aspire](https://aspire.atmecs.online/login)"
   utter_attendance:
   - text: "Login to HR Berry -> My Attendance. \nHere is the link to [HRBerry](https://www.hrberry.com/smarthr/index.php?q=cms&m=index&client=atmecs)"
   utter_applyleave:
@@ -157,17 +159,18 @@ responses:
   utter_travelrelated:
   - text: "For travel and Immigration related please reach out to \n raj.murgesan@atmecs.com"
   utter_operations:
-  - text: "For Operations related please reach out to \n narsimha.mukkera@atmecs.com\
-           \n babu.krishnan@atmecs.com"
+  - text: "For Operations related please reach out to \n narsimha.mukkera@atmecs.com\n\
+      \ babu.krishnan@atmecs.com"
   utter_infrastructure:
-  - text: "For Infrastructure related please reach out to \ngiridhar.obulesugari@atmecs.com\
-         \nTo raise a ticket Navigate to Aspire -> HumanResources -> IT Help Desk \n\
-           Here is the link to [Aspire](https://aspire.atmecs.online/login)"
+  - text: "For Infrastructure related please reach out to \ngiridhar.obulesugari@atmecs.com\n\
+      To raise a ticket Navigate to Aspire -> HumanResources -> IT Help Desk \nHere\
+      \ is the link to [Aspire](https://aspire.atmecs.online/login)"
   utter_holidaycalendar_city:
-  - text: 'here is the holiday calendar'
-    attachment: { "type":"image", "payload":{ "src": "static/images/Hyderabad_holiday_Calendar.jpg" } }
-
-        
+  - text: here is the holiday calendar
+    attachment:
+      type: image
+      payload:
+        src: static/images/Hyderabad_holiday_Calendar.jpg
 actions:
 - respond_chitchat
 - action_personal_details
@@ -198,3 +201,15 @@ actions:
 - action_leave_balance
 - action_get_employee_id
 - action_weather_api
+- utter_thanks_for_the_details
+- utter_deny_accept
+- utter_capture_empid
+- utter_city
+- utter_temp
+- utter_fbp
+- utter_attendance
+- utter_applyleave
+- utter_travelrelated
+- utter_operations
+- utter_infrastructure
+- utter_holidaycalendar_city
