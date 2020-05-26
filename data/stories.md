@@ -138,6 +138,10 @@
 * additionallinks
     - utter_anything_else
 
+## fallback story
+* out_of_scope
+   - action_default_fallback
+
 # notvalidinputs
 * out_of_scope
     - utter_canthelp

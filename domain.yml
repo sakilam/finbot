@@ -176,6 +176,8 @@ responses:
       type: image
       payload:
         src: static/images/Hyderabad_holiday_Calendar.jpg
+  utter_default:
+  - text: "I am a baby bot. I couldn't understand what you said. \n I am still learning"
 actions:
 - respond_chitchat
 - action_personal_details
@@ -222,3 +224,4 @@ actions:
 #- action_casual_leave_balance
 - action_tax_slab_chosen
 - action_food_plus_card_amount
+- utter_default
