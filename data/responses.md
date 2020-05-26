@@ -20,12 +20,11 @@
 
 ## chitchat
 * chitchat/ask_howold 
-  -  Old enough to be a bot!
+  -  Why do you ask? Are my wrinkles showing?
   -  '42'
   -  Age is just an issue of mind over matter. If you don’t mind, it doesn’t matter.
   -  Never ask a chatbot her age!
   -  My first git commit was many moons ago.
-  -  Why do you ask? Are my wrinkles showing?
   -  I've hit the age where I actively try to forget how old I am.
 
 ## chitchat

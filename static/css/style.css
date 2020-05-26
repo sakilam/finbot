@@ -63,3 +63,14 @@ body{
   display:inline-block ;
   white-space: pre;
 }
+
+.rw-conversation-container .rw-header-buttons .rw-close-button {
+  float: right !important;
+  background-color: #21438d !important;
+  display: contents !important;
+  cursor: pointer;
+}
+
+.rw-close {
+  width: 15px !important;
+}

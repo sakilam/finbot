@@ -237,10 +237,8 @@ class ActionGuestPassword(Action):
         return "action_guest_password"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        entities = tracker.latest_message['entities']
-
         dispatcher.utter_message('Guest wifi password is WelcomeAtmecs@123')
-        return _set_emp_details_slot(tracker, response)
+        return []
 
 class ActionProject(Action):
 
